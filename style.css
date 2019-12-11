@@ -19,74 +19,50 @@ html {
     #ffc75f,
     #f9f871
   );
+
+  --gradient-duration: 20s;
 }
 
 body {
   height: 100vh;
   display: grid;
   place-items: center;
-  background-color: rgb(218, 218, 236);
-  /* background-image: var(--gradient); */
+  /* background-color: rgb(218, 218, 236); */
+  background-image: var(--gradient);
   background-size: 400%;
-  /* animation: bodyGradient 15s infinite alternate ease-in-out; */
+  animation: bodyGradient var(--gradient-duration) infinite alternate
+    ease-in-out;
+  overflow: hidden;
 }
 
 .content {
   padding: 3rem;
-  width: 60vw;
-  background-color: white;
-  box-shadow: 0px 0px 3em rgba(0, 0, 0, 0.2);
+  width: 100%;
+  background-color: rgb(218, 218, 236);
+  box-shadow: 0px 0px 4em rgba(0, 0, 0, 0.6);
   display: grid;
+  gap: 4rem;
   place-items: center;
 }
 
-.title {
-  color: rgb(209, 68, 68);
-  font-style: italic;
-  font-size: 6rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  /* line-height: 0.9rem; */
-
-  /* text gradient + animation */
-  background-image: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  background-size: 400%;
-  animation: bodyGradient 5s infinite alternate ease-in-out;
+audio {
+  /* height: 50px; */
+  outline: none;
 }
 
-.fun {
-  padding: 0.4rem;
-  align-self: flex-start;
-  /* font-weight: 200; */
-  /* font-weight: 500; */
-  border: none;
-  /* background: rgb(31, 133, 128); */
-  background-image: var(--gradient);
-  color: rgb(236, 236, 236);
-  font-size: 0.9rem;
-  padding: 0.8rem 1.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 4px;
-  cursor: pointer;
-
-  /* remember that background images are one of the few properties that can't be transformed directly */
-
-  /* setting the size like this means that it overflows the container, but we don't see the spillover because it is a background */
-  background-size: 300%;
-  background-position: left;
-
-  transition: background-position 2s ease-in-out;
+.now-playing .song-info {
+  color: rgb(43, 42, 42);
 }
 
-.fun:hover,
-.fun:focus {
-  background-position: right;
-  /* background-image: linear-gradient(red, blue); */
+.now-playing .song-name {
+  margin-bottom: 0.3em;
+  color: rgb(223, 91, 91);
+  font-weight: 800;
+}
+
+.now-playing .artist-name,
+.now-playing .album-name {
+  font-weight: 400;
 }
 
 /* KEYFRAME ANIMATIONS */
