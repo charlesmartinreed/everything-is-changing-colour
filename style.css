@@ -25,30 +25,36 @@ body {
   height: 100vh;
   display: grid;
   place-items: center;
-  /* background-color: rgb(218, 218, 236); */
-  background-image: var(--gradient);
+  background-color: rgb(218, 218, 236);
+  /* background-image: var(--gradient); */
   background-size: 400%;
-  animation: bodyGradient 15s infinite alternate ease-in-out;
+  /* animation: bodyGradient 15s infinite alternate ease-in-out; */
 }
 
 .content {
-  padding: 2rem;
+  padding: 3rem;
   width: 60vw;
-  height: 180px;
   background-color: white;
   box-shadow: 0px 0px 3em rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
 }
 
 .title {
   color: rgb(209, 68, 68);
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 6rem;
   font-weight: 900;
   text-transform: uppercase;
   /* line-height: 0.9rem; */
+
+  /* text gradient + animation */
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bodyGradient 5s infinite alternate ease-in-out;
 }
 
 .fun {
