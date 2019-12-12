@@ -34,7 +34,6 @@ body {
   background-size: 400%;
   animation: bodyGradient var(--gradient-duration) infinite alternate
     ease-in-out;
-  overflow: hidden;
 }
 
 .content {
@@ -58,16 +57,14 @@ audio {
 
 .now-playing .song-name {
   margin-bottom: 0.3em;
-  color: rgb(223, 91, 91);
+  color: rgb(29, 29, 136);
   font-weight: 800;
+  font-size: 3rem;
 }
 
 .now-playing .artist-name,
 .now-playing .album-name {
   font-weight: 400;
-}
-
-.track-listing .track-list {
 }
 
 .track-listing .track-list .track-item {
@@ -80,9 +77,9 @@ audio {
   padding: 0 1em;
   margin-top: 0.1em;
   color: rgb(43, 42, 42);
-  box-shadow: 1px 1px 2em rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 1px 2em rgba(0, 0, 0, 0.5);
 
-  transition: all 0.8s linear;
+  transition: all 0.3s linear;
 }
 
 .track-listing .track-list .track-item:nth-of-type(even) {
