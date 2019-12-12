@@ -51,6 +51,36 @@ audio {
   outline: none;
 }
 
+.now-playing {
+  background-color: rgb(226, 226, 238);
+  box-shadow: 0px 0px 4em rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+
+  width: 90%;
+  height: 90%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.now-playing .now-playing-art {
+  /* margin-bottom: 1.2em; */
+}
+
+.now-playing .album-art {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 3px;
+  margin: 1em auto;
+}
+
+.now-playing .now-playing-info {
+}
+
 .now-playing .song-info {
   color: rgb(43, 42, 42);
 }
@@ -58,13 +88,19 @@ audio {
 .now-playing .song-name {
   margin-bottom: 0.3em;
   color: rgb(29, 29, 136);
-  font-weight: 800;
-  font-size: 3rem;
+  font-weight: 900;
+  font-size: 2.2rem;
 }
 
 .now-playing .artist-name,
 .now-playing .album-name {
-  font-weight: 400;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  font-size: 1.1em;
+}
+
+.now-playing .album-name {
+  color: rgb(223, 91, 91);
 }
 
 .track-listing .track-list .track-item {
@@ -80,6 +116,7 @@ audio {
   box-shadow: 1px 1px 2em rgba(0, 0, 0, 0.5);
 
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 
 .track-listing .track-list .track-item:nth-of-type(even) {
