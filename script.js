@@ -2,7 +2,6 @@ const audio = document.querySelector("audio");
 audio.controls = true;
 
 let songDuration;
-
 const playerToggle = document.querySelector(".play-toggle");
 
 let songNameEl = document.querySelector(".song-name");

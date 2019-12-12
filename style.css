@@ -20,13 +20,15 @@ html {
     #f9f871
   );
 
-  --gradient-duration: 20s;
+  --gradient-duration: 22s;
 }
 
 body {
   height: 100vh;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-items: center;
+  /* place-items: center; */
   /* background-color: rgb(218, 218, 236); */
   background-image: var(--gradient);
   background-size: 400%;
@@ -63,6 +65,45 @@ audio {
 .now-playing .artist-name,
 .now-playing .album-name {
   font-weight: 400;
+}
+
+.track-listing .track-list {
+}
+
+.track-listing .track-list .track-item {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 1em;
+  margin-top: 0.1em;
+  color: rgb(43, 42, 42);
+  box-shadow: 1px 1px 2em rgba(0, 0, 0, 0.8);
+
+  transition: all 0.8s linear;
+}
+
+.track-listing .track-list .track-item:nth-of-type(even) {
+  margin-left: 0.5em;
+  /* margin: 0.1em 0 0.5em; */
+  width: 105%;
+}
+
+.track-listing .track-list .track-item.playing {
+  color: rgb(29, 29, 136);
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.02);
+}
+
+.track-listing .track-list .track-item:hover {
+  transform: scale(1.02);
+}
+
+.track-listing .track-list .track-item span {
+  font-size: 0.6em;
+  color: rgb(223, 91, 91);
 }
 
 /* KEYFRAME ANIMATIONS */
